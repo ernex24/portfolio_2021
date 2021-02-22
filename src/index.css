@@ -1,13 +1,707 @@
-body {
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+  list-style-type: none;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a { color:#ffffff} /* Globally */
+
+/* Each state */
+
+a:visited { text-decoration: none; color:#ffffff; font-weight: 300; transition: 300ms; }
+a:hover { text-decoration: none; color:#ffffff; font-weight: 700; transition: 300ms;  }
+a:focus { text-decoration: none; color:#ffffff; font-weight: 300; transition: 300ms;  }
+a:hover, a:active { text-decoration: none; color:#ffffff; font-weight: 300; transition: 300ms;  }
+
+
+a:hover {
+  font-weight: 700;
+  transition: 300ms;
+}
+
+a { color: inherit; } 
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+#fullpage {
+  z-index: 11;
+}
+
+h1 {
+  font-size: 80px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+h4 {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.5;
+  margin: 10px 0 0 20px;
+  color: #5a6d8a;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
+  background-image: linear-gradient(#364153, #242C38);
+}
+
+.header {
+  position: absolute;
+  margin-right: 50px;
+  padding: 28px 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  z-index: 100;
+  width: 100%;
+}
+
+.header .logo {
+  margin: 0 60px 0 40px;
+}
+
+.nav {
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-weight: 300;
+  margin-right: 30px;
+  width: 30%;
+  min-width: 500px;
+}
+
+#fp-nav ul li a span {
+  background: #fff !important;
+}
+
+.navactive {
+  transition: 100ms;
+  font-weight: 700;
+}
+
+.nav li {
+  margin-right: 30px;
+  font-family: 600;
+}
+.nav li:last-child {
+  margin-right: 0;
+}
+.nav li:active {
+  font-family: 900;
+}
+
+.socialnav {
+  display: flex;
+}
+
+.socialnav li {
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+.mainHeader{
+display: flex;
+align-items: flex-start;
+}
+
+.arrowDown{
+  position: absolute;
+  left: 50px;
+  bottom: 50px;
+  cursor: pointer;
+  z-index: 100;
+  transition: 500ms;
+}
+
+.arrowUp{
+  position: absolute;
+  left: 50px;
+  bottom: 100px;
+  cursor: pointer;
+  z-index: 100;
+  transition: 500ms;
+}
+
+.arrowUp:hover{
+  transition: 500ms;
+ transform: scale(1.5);
+}
+
+.arrowDown:hover{
+  transition: 500ms;
+ transform: scale(1.5);
+}
+
+.arrowUp:active{
+  transition: 500ms;
+ transform: scale(0.8);
+}
+
+.arrowDown:active{
+  transition: 500ms;
+ transform: scale(0.8);
+}
+
+
+.hide{
+  display: none;
+}
+
+.fixedContainer {
+  position: absolute;
+  top: -262px;
+  right: -287px;
+  width: 800px;
+  height: 140%;
+  transform: rotate(-25deg);
+  box-shadow: 0px 30px 100px rgba(0, 0, 0, 0.8);
+  background: linear-gradient(180deg, #d9507a 0%, #e6284e 85.6%);
+  background-size: 800% 800%;
+  z-index: 10;
+  pointer-events: none;
+
+  -webkit-animation: AnimationName 3s ease infinite;
+  -moz-animation: AnimationName 3s ease infinite;
+  -o-animation: AnimationName 3s ease infinite;
+  animation: AnimationName 3s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:50% 0%}
+  50%{background-position:51% 100%}
+  100%{background-position:50% 0%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:50% 0%}
+  50%{background-position:51% 100%}
+  100%{background-position:50% 0%}
+}
+@-o-keyframes AnimationName {
+  0%{background-position:50% 0%}
+  50%{background-position:51% 100%}
+  100%{background-position:50% 0%}
+}
+@keyframes AnimationName {
+  0%{background-position:50% 0%}
+  50%{background-position:51% 100%}
+  100%{background-position:50% 0%}
+}
+
+.fixedText {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  z-index: 9;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.backPatterns {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: #364153 !important;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.niceBackgroundContainer{
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: all 1s;
+}
+
+.niceBackground {
+  pointer-events: none;
+  transition: all 1s;
+}
+
+.mainText {
+  height: 100%;
+  margin-top: 30%;
+  text-align: left;
+  margin-left: 10%;
+  width: 40%;
+}
+
+.redDots {
+  width: 200px;
+  height: 195px;
+  color: #e6284e;
+  margin: -141px 0 0 -50px;
+}
+
+.whiteDots {
+  position: absolute;
+  right: 5%;
+  top: 15%;
+  width: 300px;
+  height: 300px;
+  color: #ffffff;
+  z-index: 3;
+  opacity: 0.5;
+}
+
+.mainText h1 {
+  margin-bottom: 24px;
+}
+.pageNumberContainer{
+  position: absolute;
+  right: 50px;
+  bottom: 24px;
+  z-index: 1;
+}
+.pageNumber {
+    
+    font-size: 120px;
+    opacity: 0.1;
+    font-variant-numeric: lining-nums;
+
+    font-weight: 600;
+}
+
+.phone {
+    position: absolute;
+    right: 14%;
+    top: 15%;
+    max-width: 306px;
+    box-shadow: 0 0px 30px rgb(0 0 0 / 60%);
+    border-radius: 30px;
+}
+
+.laptop {
+  position: absolute;
+  top: 25%;
+  right: 4%;
+  max-height: 380px;
+  box-shadow: 0 0px 30px rgb(0 0 0 / 60%);
+  border-radius: 10px;
+}
+
+.tablet {
+  position: absolute;
+  right: 12%;
+  top: 20%;
+}
+
+.imac {
+  position: absolute;
+  right: 10%;
+  top: 20%;
+}
+
+.cta {
+  background-color: #EC3966;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 24px;
+  transition: 300ms;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.cta:hover {
+  background-color: #e6284e;
+  transition: 300ms;
+}
+
+.cta:active {
+  background-color: #ED3968;
+}
+
+.cta:focus {
+  outline: none;
+  box-shadow: 0 0 0 5px rgba(230, 40, 78, 0.4);
+}
+
+a:visited {
+  color: fff;
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: #fff;
+  background: rgba(230, 40, 78, 0.4);
+}
+
+::selection {
+  color: #fff;
+  background: rgba(230, 40, 78, 0.4);
+}
+
+/* TABLET LANDSCAPE / DESKTOP */
+@media only screen and (max-width: 1024px) and (orientation: landscape) {
+
+
+  .laptop {
+    position: absolute;
+    top: 25%;
+    width: auto;
+    height: 38%;
+    right: 0;
+  }
+
+  .phone {
+    position: absolute;
+    right: 14%;
+    top: 15%;
+    width: auto;
+    height: 62%;
+    }
+}
+
+/* TABLET LANDSCAPE / DESKTOP */
+@media only screen and (max-width: 1024px) and (orientation: portrait) {
+
+  .laptop {
+    position: absolute;
+    top: 48%;
+    width: auto;
+    height: 32%;
+    right: 0;
+  }
+
+  .phone {
+    position: absolute;
+    right: 14%;
+    top: 36%;
+    width: auto;
+    height: 50%;
+   }
+}
+
+
+
+
+
+/* TABLETS PORTRAIT */
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+
+  .niceBackground {
+    position: absolute;
+    width: 60vw;
+    top: 0;
+    right: 0;
+    pointer-events: none;
+}
+
+  .laptop {
+    position: absolute;
+    top: 57%;
+    width: auto;
+    height: 26%;
+    right: 3%;
+  }
+
+  .nav{
+display: none;
+  }
+
+  .phone {
+    position: absolute;
+    right: 10%;
+    top: 37%;
+    width: auto;
+    height: 47%;
+  }
+}
+
+/* TABLETS PORTRAIT */
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+
+  .niceBackground {
+    position: absolute;
+    width: 60vw;
+    top: 0;
+    right: 0;
+    pointer-events: none;
+}
+
+  .laptop {
+    position: absolute;
+    top: 57%;
+    width: auto;
+    height: 20%;
+    right: 3%;
+  }
+
+  .nav{
+display: none;
+  }
+
+  .phone {
+    position: absolute;
+    right: 10%;
+    top: 37%;
+    width: auto;
+    height: 47%;
+  }
+}
+
+
+/* SMARTPHONES LANDSCAPE */
+@media only screen and (max-width: 480px) and (orientation: portrait) {
+
+  .nav {
+    display: none;
+  }
+
+  .logo{
+    height: 35px;
+  }
+
+  .phone {
+    position: absolute;
+    right: 25%;
+    top: 46%;
+    width: auto;
+    height: 40%;
+  }
+
+  .laptop {
+    position: absolute;
+    top: 48%;
+    width: auto;
+    height: 23%;
+    right: -4px;
+  }
+
+  .mainText {
+    height: 100%;
+    margin-top: 180px;
+    text-align: left;
+    margin-left: 10%;
+    width: 50%;
+  }
+
+  h2 {
+    font-size: 12px;
+  }
+  h1 {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1.3;
+  }
+  h3 {
+    font-size: 12px;
+    line-height: 1.3;
+  }
+
+  .pageNumber {
+    position: absolute;
+    right: 20px;
+    bottom: 24px;
+    font-size: 6rem;
+    opacity: 0.2;
+    font-variant-numeric: lining-nums;
+  }
+
+  .cta {
+    padding: 8px 24px;
+    font-size: 14px;
+    margin-top: 16px;
+}
+
+}
+
+
+/* SMARTPHONES PORTRAIT */
+@media only screen and (max-width: 375px) {
+
+
+  .phone {
+    position: absolute;
+    right: 2%;
+    top: 63%;
+    width: auto;
+    height: 34%;
+  }
+
+  .laptop {
+    position: absolute;
+    top: 63%;
+    width: auto;
+    height: 23%;
+    right: -20px;
+  }
+
+  .mainText {
+    height: 100%;
+    margin-top: 157px;
+    text-align: left;
+    margin-left: 10%;
+    width: 50%;
+  }
+
+  .pageNumber {
+    position: absolute;
+    right: 121px;
+    bottom: 24px;
+    font-size: 2rem;
+    opacity: 0.2;
+    font-variant-numeric: lining-nums;
+  }
+
+  .arrowDown{
+    left: 30px;
+  }
+  
+  .arrowUp{
+    left: 30px;
+  }
+   
 }
