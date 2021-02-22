@@ -3,6 +3,9 @@ import React, { useState, useEffect } from "react";
 import Bounce from 'react-reveal/Bounce';
 import { motion, AnimatePresence } from "framer-motion";
 
+import {
+  Link
+} from "react-router-dom";
 
 function MySection(props){
   const [show, setShow] = useState(false);
@@ -21,7 +24,9 @@ function MySection(props){
         <h2>{props.subtitle}</h2>
         <h1>{props.title}</h1>
         <h3>{props.description}</h3>
+        <Link to="/project">
         <button className="cta">{props.cta}</button>
+        </Link>
         <h4>{props.message}</h4>
       </div>
       <Bounce right when={show}>
