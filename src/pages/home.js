@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 import Header from "../components/header";
 import MySection from "../components/section";
@@ -9,7 +9,6 @@ import comercialbank from '../assets/images/comercialwebpage.svg';
 import bank from '../assets/images/investmentbank.svg';
 import evscreen from '../assets/images/ev-screen.svg';
 import designSystem from '../assets/images/design-system.svg';
-import laptop from '../assets/images/Macbook.png';
 import arrowDown from '../assets/images/arrow_down.svg';
 import arrowUp from '../assets/images/arrow_up.svg';
 import niceBackground from '../assets/images/niceBackground.svg';
@@ -118,7 +117,7 @@ const Home = () => {
            initial={{ opacity: 0, x: 800 }}
            animate={{ opacity: 1, x: 20 }}      
         >
-          <img className="niceBackground" src={niceBackground}></img>
+          <img className="niceBackground" src={niceBackground} alt="Ernesto Pérez UI UX Designer"></img>
           </motion.div>
       </AnimatePresence>
 
@@ -131,8 +130,8 @@ const Home = () => {
            initial={{ opacity: 0, x: -50 }}
            animate={{ opacity: 1, x: 0 }}      
         >
-      <img onClick={() => moveDown()} className={ origin === 3 ? " hide" : " arrowDown"} src={arrowDown}></img>
-      <img onClick={() => moveUp()} className={ origin === 0 ? " hide" : " arrowUp"  } src={arrowUp}></img>
+      <img onClick={() => moveDown()} className={ origin === 3 ? " hide" : " arrowDown"} src={arrowDown} alt="Ernesto Pérez UI UX Designer"></img>
+      <img onClick={() => moveUp()} className={ origin === 0 ? " hide" : " arrowUp"  } src={arrowUp} alt="Ernesto Pérez UI UX Designer"></img>
       </motion.div>
       </AnimatePresence>
       </div>

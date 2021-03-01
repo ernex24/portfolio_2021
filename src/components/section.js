@@ -1,7 +1,5 @@
-import PropTypes from "prop-types";
 import React, { useState, useEffect } from "react";
 import Bounce from 'react-reveal/Bounce';
-import { motion, AnimatePresence } from "framer-motion";
 
 import {
   Link
@@ -15,7 +13,7 @@ function MySection(props){
 
   useEffect(() => {
     origin === destination ? setShow(true) : setShow(false);
-  });
+  }, [origin, destination]);
   
   return (
     
@@ -30,7 +28,7 @@ function MySection(props){
         <h4>{props.message}</h4>
       </div>
       <Bounce right when={show}>
-      <img className={props.class} src={props.screen}></img>
+      <img className={props.class} src={props.screen} alt="Ernesto Pérez UI UX Design"></img>
       </Bounce>
     </div>
    

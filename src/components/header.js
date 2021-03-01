@@ -1,4 +1,3 @@
-import PropTypes from "prop-types"
 import React from "react"
 import { motion, AnimatePresence } from "framer-motion"
 
@@ -22,7 +21,7 @@ const Header = (props) => (
       animate={{ opacity: 1, y: 0 }}   
      >
     <div className="mainHeader">
-    <div><a href="#home" onClick={() => moveTo(1)} ><img className="logo" src={logo}></img></a></div>
+    <div><a href="#home" onClick={() => moveTo(1)} ><img className="logo" src={logo} alt="Ernesto Pérez UI UX Designer"></img></a></div>
     <ul className="nav">
 
       <li><a href="#home" 
@@ -56,9 +55,9 @@ const Header = (props) => (
   animate={{ opacity: 1, y: 0 }}   
 >
     <ul className="socialnav">
-      <li><a href="https://www.linkedin.com/ernesto1984" target="_blank"><img src={linkedin}></img></a></li>
-      <li><a href="https://dribbble.com/ernex1984" target="_blank"><img src={dribbble}></img></a></li>
-      <li><a href="https://www.instagram.com/ernex_ux_ui" target="_blank"><img src={instagram}></img></a></li>
+      <li><a href="https://www.linkedin.com/ernesto1984" target="_blank" rel="noreferrer" ><img src={linkedin} alt="Ernesto Pérez UI UX Designer"></img></a></li>
+      <li><a href="https://dribbble.com/ernex1984" target="_blank" rel="noreferrer" ><img src={dribbble} alt="Ernesto Pérez UI UX Designer"></img></a></li>
+      <li><a href="https://www.instagram.com/ernex_ux_ui" target="_blank" rel="noreferrer" ><img src={instagram} alt="Ernesto Pérez UI UX Designer"></img></a></li>
     </ul>
     </motion.div>
   </AnimatePresence>
