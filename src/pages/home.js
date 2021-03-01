@@ -66,7 +66,7 @@ const Home = () => {
               description={"I spread design all over the company creating a design system."} 
               cta={"See the project"} 
               message={"Comming soon"} 
-              link={"/page-2"} 
+              link={"#"} 
               screen={designSystem} 
               class={"laptop"} 
               pageactive={origin} 

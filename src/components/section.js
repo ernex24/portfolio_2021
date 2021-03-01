@@ -24,7 +24,7 @@ function MySection(props){
         <h2>{props.subtitle}</h2>
         <h1>{props.title}</h1>
         <h3>{props.description}</h3>
-        <Link to="/project">
+        <Link to="#">
         <button className="cta">{props.cta}</button>
         </Link>
         <h4>{props.message}</h4>
