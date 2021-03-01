@@ -8,7 +8,7 @@ const Project = (props) => (
 
  <div>
      Project page
-     <Link to="/"> Back </Link>
+     <Link to="/#home"> Back </Link>
  </div>
   
 )

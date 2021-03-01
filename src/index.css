@@ -371,6 +371,7 @@ align-items: flex-start;
   text-align: left;
   margin-left: 10%;
   width: 40%;
+  filter: drop-shadow(0px 0px 15px rgba(0,0,0,0.6));
 }
 
 .redDots {
@@ -416,6 +417,7 @@ align-items: flex-start;
     max-width: 306px;
     box-shadow: 0 0px 30px rgb(0 0 0 / 60%);
     border-radius: 30px;
+    z-index: -1;
 }
 
 .laptop {
@@ -425,18 +427,21 @@ align-items: flex-start;
   max-height: 380px;
   box-shadow: 0 0px 30px rgb(0 0 0 / 60%);
   border-radius: 10px;
+  z-index: -1;
 }
 
 .tablet {
   position: absolute;
   right: 12%;
   top: 20%;
+  z-index: -1;
 }
 
 .imac {
   position: absolute;
   right: 10%;
   top: 20%;
+  z-index: -1;
 }
 
 .cta {
@@ -483,45 +488,43 @@ a:visited {
   background: rgba(230, 40, 78, 0.4);
 }
 
+.comercial_web{
+  position: absolute;
+  top: 25%;
+  right: 4%;
+  max-height: 554px;
+  box-shadow: 0 0px 30px rgb(0 0 0 / 60%);
+  border-radius: 10px;
+  z-index: -1;
+}
+
 /* TABLET LANDSCAPE / DESKTOP */
 @media only screen and (max-width: 1024px) and (orientation: landscape) {
 
 
-  .laptop {
-    position: absolute;
-    top: 25%;
-    width: auto;
-    height: 38%;
-    right: 0;
-  }
+ 
 
-  .phone {
+  /* .phone {
     position: absolute;
     right: 14%;
     top: 15%;
     width: auto;
     height: 62%;
-    }
+    } */
 }
 
 /* TABLET LANDSCAPE / DESKTOP */
 @media only screen and (max-width: 1024px) and (orientation: portrait) {
 
-  .laptop {
-    position: absolute;
-    top: 48%;
-    width: auto;
-    height: 32%;
-    right: 0;
-  }
 
-  .phone {
+
+  /* .phone {
     position: absolute;
     right: 14%;
     top: 36%;
     width: auto;
     height: 50%;
-   }
+   } */
 }
 
 
@@ -551,13 +554,13 @@ a:visited {
 display: none;
   }
 
-  .phone {
+  /* .phone {
     position: absolute;
     right: 10%;
     top: 37%;
     width: auto;
     height: 47%;
-  }
+  } */
 }
 
 /* TABLETS PORTRAIT */
@@ -593,6 +596,8 @@ display: none;
 }
 
 
+
+
 /* SMARTPHONES LANDSCAPE */
 @media only screen and (max-width: 480px) and (orientation: portrait) {
 
@@ -626,6 +631,7 @@ display: none;
     text-align: left;
     margin-left: 10%;
     width: 50%;
+   
   }
 
   h2 {
@@ -705,3 +711,10 @@ display: none;
   }
    
 }
+
+html,
+body,
+#root {
+  height: 100%;
+}
+

@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Header from "../components/header";
 import MySection from "../components/section";
 
 import ReactFullpage from '@fullpage/react-fullpage';
 
-import phone from '../assets/images/iPhone.png';
+import comercialbank from '../assets/images/comercialwebpage.svg';
+import bank from '../assets/images/investmentbank.svg';
 import evscreen from '../assets/images/ev-screen.svg';
 import designSystem from '../assets/images/design-system.svg';
 import laptop from '../assets/images/Macbook.png';
@@ -27,6 +28,7 @@ const moveUp = () => {
 
 
 const Home = () => { 
+
   const [origin, setOrigin] = useState(0);
   const [destination, setDestination] = useState(0);
   const onLeave = (origin, destination, direction) => setOrigin(destination.index);
@@ -61,7 +63,7 @@ const Home = () => {
             <MySection 
               title={"Design system"}
               subtitle={"Project"} 
-              description={"A system-minded Senior Product Designer with visual design, development, and business background."} 
+              description={"I spread design all over the company creating a design system."} 
               cta={"See the project"} 
               message={"Comming soon"} 
               link={"/page-2"} 
@@ -70,25 +72,25 @@ const Home = () => {
               pageactive={origin} 
               pageloaded={destination}/>
             <MySection 
-              title={"Web app"} 
+              title={"Comercial web"} 
               subtitle={"Project"} 
-              description={"A system-minded Senior Product Designer with visual design, development, and business background."} 
+              description={"A corporative we for an investment bank"} 
               cta={"See the project"} 
               message={"Comming soon"} 
               link={"#"} 
-              screen={laptop} 
-              class={"laptop"} 
+              screen={comercialbank} 
+              class={"comercial_web"} 
               pageactive={origin} 
               pageloaded={destination}/>
             <MySection 
-              title={"Mobile app"}
+              title={"Investment bank app"}
               subtitle={"Project"} 
-              description={"A system-minded Senior Product Designer with visual design, development, and business background."} 
+              description={"An app to operate in the stock market"} 
               cta={"See the project"} 
               message={"Comming soon"} 
               link={"#"} 
-              screen={phone} 
-              class={"phone"} 
+              screen={bank} 
+              class={"laptop"} 
               pageactive={origin} 
               pageloaded={destination}/>
             </div>
