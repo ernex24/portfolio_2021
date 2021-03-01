@@ -74,7 +74,7 @@ const Home = () => {
             <MySection 
               title={"Comercial web"} 
               subtitle={"Project"} 
-              description={"A corporative we for an investment bank"} 
+              description={"A corporative web for an investment bank"} 
               cta={"See the project"} 
               message={"Comming soon"} 
               link={"#"} 
